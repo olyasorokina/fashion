@@ -1,4 +1,8 @@
 Fashion::Application.routes.draw do
+  resources :outfits
+
+  resources :collections
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

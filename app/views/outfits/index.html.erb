@@ -1,0 +1,27 @@
+<h1>Listing outfits</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Collection</th>
+	<th>Image url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @outfits.each do |outfit| %>
+  <tr>
+    <td><%= outfit.name %></td>
+    <td><%= outfit.collection_id %></td>
+	<td><%= outfit.image_url %></td>
+    <td><%= link_to 'Show', outfit %></td>
+    <td><%= link_to 'Edit', edit_outfit_path(outfit) %></td>
+    <td><%= link_to 'Destroy', outfit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Outfit', new_outfit_path %>
