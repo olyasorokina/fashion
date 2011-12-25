@@ -58,3 +58,35 @@ nav ul li a:visited {
 nav ul li a:hover {
   text-decoration: underline;
 }
+
+h1.outfit {
+  margin-bottom: 0.3em;
+}
+
+table.outfits {
+  margin-top: 3em;
+}
+
+table.outfits tr {
+  height: 350px;
+}
+
+table.outfits tr td.p {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 280px;
+}
+
+table.outfits tr td.outfit {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+  
+}
+
+table.outfits tr td.outfit span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+

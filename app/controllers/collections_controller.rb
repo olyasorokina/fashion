@@ -14,7 +14,8 @@ class CollectionsController < ApplicationController
   # GET /collections/1.xml
   def show
     @collection = Collection.find(params[:id])
-
+	@outfits = @collection.outfits.paginate(:page => params[:page])
+	
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @collection }

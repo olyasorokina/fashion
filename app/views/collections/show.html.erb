@@ -1,15 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
   <%= @collection.name %>
 </p>
 
-<p>
-  <b>Description:</b>
-  <%= @collection.description %>
-</p>
+	  <% unless @collection.outfits.empty? %>
+        <table cellspacing="10" class="outfits" >
+		  <tr>
+			<td class="outfit">
+				<%= render @outfits %>
+			</td>
+		   </tr>
+          </table>
+		<%= will_paginate @outfits %>
+      <% end %>
+    
 
 
-<%= link_to 'Edit', edit_collection_path(@collection) %> |
 <%= link_to 'Back', collections_path %>

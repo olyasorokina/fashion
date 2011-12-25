@@ -1,4 +1,4 @@
-<h1>Listing collections</h1>
+<h1>All collections</h1>
 
 <table>
   <tr>
@@ -11,7 +11,7 @@
 
 <% @collections.each do |collection| %>
   <tr>
-    <td><%= collection.name %></td>
+    <td><%= link_to collection.name, collection %></td>
     <td><%= collection.description %></td>
     <td><%= link_to 'Show', collection %></td>
     <td><%= link_to 'Edit', edit_collection_path(collection) %></td>
