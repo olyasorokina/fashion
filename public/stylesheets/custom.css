@@ -1,16 +1,18 @@
 
 .container {
-  width: 810px;
+  width: auto;
 }
 
 header {
-  padding-top: 20px;
+  padding-top: 70px;
+  padding-right:96px;
+
 }
 
 /* Links */
 
 a {
-  color: #09c;
+  color: #09c;  /* #09c */
   text-decoration: none;
 }
 
