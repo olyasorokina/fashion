@@ -9,6 +9,11 @@
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->    
 
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/prototype/1/prototype.js'></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/scriptaculous/1/scriptaculous.js'></script>
+<script type='text/javascript' src='/javascripts/lightview.js'></script>
+<link rel="stylesheet" type="text/css" href="/stylesheets/lightview.css" />
+
 <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
 <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
 <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
@@ -69,24 +74,22 @@
         </nav>
       </header>
       <section class="roun">
-		
+		<p>
+			<%= @collection.name %>
+		</p>
 
-<p>
-  <%= @collection.name %>
-</p>
-
-	  <% unless @collection.outfits.empty? %>
-        <table cellspacing="10" class="outfits" >
-		  <tr>
-			<td class="outfit">
-				<%= render @outfits %>
-			</td>
-		   </tr>
-          </table>
+		<% unless @collection.outfits.empty? %>
+			<table cellspacing="10" class="outfits" >
+				<tr>
+					<td class="outfit">
+						<%= render @outfits %>
+					</td>
+				</tr>
+			</table>
 		<%= will_paginate @outfits %>
       <% end %>
-    
-		</section>
+	 
+	 </section>
     </div>
   </body>
 </html>
